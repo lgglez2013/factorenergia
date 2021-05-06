@@ -1,0 +1,2 @@
+api:
+  resource: ../src/Factorenergia/Api/Infrastructure/Routes/routes.yml

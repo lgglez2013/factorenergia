@@ -1,0 +1,4 @@
+services:
+  api.services.uuidIdStringGenerator:
+    class: Factorenergia\Api\Infrastructure\Service\UuidIdStringGenerator
+

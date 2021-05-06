@@ -1,0 +1,5 @@
+services:
+  api.repository.doctrineQuestionRepository:
+    class: Factorenergia\Api\Infrastructure\Persistence\Doctrine\Repository\DoctrineQuestionRepository
+    arguments:
+      - '@doctrine.orm.default_entity_manager'

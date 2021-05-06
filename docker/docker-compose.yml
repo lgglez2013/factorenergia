@@ -1,0 +1,28 @@
+version: '3.6'
+services:
+  api-factorenergia:
+    build: api
+    volumes:
+      - ../code:/var/www/html/factorenergia
+    links:
+      - db-factorenergia
+  nginx-factorenergia:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ../code:/var/www/html/factorenergia
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ../log:/var/log/factorenergia
+    links:
+      - api-factorenergia
+  db-factorenergia:
+    image: library/mysql:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=factorenergia
+      - MYSQL_USER=factorenergia_user
+      - MYSQL_PASSWORD=1234

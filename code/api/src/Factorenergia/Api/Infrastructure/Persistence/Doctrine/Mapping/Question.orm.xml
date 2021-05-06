@@ -1,0 +1,10 @@
+<doctrine-mapping>
+    <entity name="Factorenergia\Api\Infrastructure\Persistence\Doctrine\Entity\Question" table="question">
+        <id name="id" type="guid" />
+        <field name="title" type="string" length="300" />
+        <field name="tag" type="string" length="300" />
+        <field name="link" type="string" length="300" />
+        <field name="createdAt" type="datetime" />
+        <field name="updatedAt" type="datetime" />
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,4 @@
+api.getQuestions:
+  path: /questions
+  controller: 'api.controller.questions.getQuestions'
+  methods: [GET]

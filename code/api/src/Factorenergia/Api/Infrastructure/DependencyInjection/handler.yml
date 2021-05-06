@@ -1,0 +1,11 @@
+services:
+  api.query.question.getQuestionsHandler:
+    class: Factorenergia\Api\Application\Query\Question\GetQuestionsHandler
+    arguments:
+      - '@api.repository.doctrineQuestionRepository'
+  #      - '@api.repository.inMemoryQuestionRepository'
+  api.command.question.createQuestionHandler:
+    class: Factorenergia\Api\Application\Command\Question\CreateQuestionHandler
+    arguments:
+      - '@api.repository.doctrineQuestionRepository'
+      - '@api.services.uuidIdStringGenerator'

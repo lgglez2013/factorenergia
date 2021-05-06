@@ -1,0 +1,8 @@
+services:
+  api.controller.questions.getQuestions:
+    class: Factorenergia\Api\Infrastructure\Ui\Http\Controller\Questions\GetQuestionsController
+    arguments:
+      - '@api.query.question.getQuestionsHandler'
+      - '@api.command.question.createQuestionHandler'
+    public: true
+
